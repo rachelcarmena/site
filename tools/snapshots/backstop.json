@@ -2,42 +2,59 @@
   "id": "backstop_default",
   "viewports": [
     {
-      "label": "smallest",
+      "label": "phone",
       "width": 360,
       "height": 640
     },
     {
-      "label": "large",
+      "label": "macbook-pro",
       "width": 1440,
       "height": 900
     },
     {
-      "label": "huge",
+      "label": "desktop",
       "width": 1920,
       "height": 1080
     }
   ],
 
-  "misMatchThreshold" : 0.15,
+  "delay" : 100,
+  "misMatchThreshold" : 0.5,
+
   
+  "_hideSelectors" : ["#cookie-message", "div.divimage", "section.dzsparallaxer", "#lssc_events"],
   
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {"label": "Codurance Homepage", "url": "http://localhost:4000/", "referenceUrl": "https://codurance.com/"},
     {"label": "Codurance Clients",  "url": "http://localhost:4000/clients/", "referenceUrl": "https://codurance.com/clients/"},
     {"label": "Codurance Services", "url": "http://localhost:4000/services/", "referenceUrl": "https://codurance.com/services/"},
     {"label": "Codurance Training", "url": "http://localhost:4000/services/training/", "referenceUrl": "https://codurance.com/services/training/"},
-    {"label": "Codurance Crafting Code", "url": "http://localhost:4000/services/training/crafting-code/", "referenceUrl": "https://codurance.com/services/training/crafting-code/"},
+    {"label": "Codurance Crafting Code", "url": "http://localhost:4000/services/training/crafting-code/", "referenceUrl": "https://codurance.com/services/training/crafting-code/", "hideSelectors": ["section.dzsparallaxer"]},
     {"label": "Codurance Publications", "url": "http://localhost:4000/publications/", "referenceUrl": "https://codurance.com/publications/"},
-    {"label": "Codurance The software craftsman", "url": "http://localhost:4000/publications/the-software-craftsman/", "referenceUrl": "https://codurance.com/publications/the-software-craftsman/"},
+    {"label": "Codurance The software craftsman", "url": "http://localhost:4000/publications/the-software-craftsman/", "referenceUrl": "https://codurance.com/publications/the-software-craftsman/", "misMatchThreshold" : 3},
     {"label": "the-functional-style-part-3", "url": "http://localhost:4000/2018/09/04/the-functional-style-part-3/", "referenceUrl": "https://codurance.com/2018/09/04/the-functional-style-part-3/"},
-    {"label": "author", "url": "http://localhost:4000/publications/author/mashooq-badar/", "referenceUrl": "https://codurance.com/publications/author/mashooq-badar/"},
-    {"label": "events", "url": "http://localhost:4000/events/", "referenceUrl": "https://codurance.com/events/"},
+    {"label": "author", "url": "http://localhost:4000/publications/author/mashooq-badar/", "referenceUrl": "https://codurance.com/publications/author/mashooq-badar/", "misMatchThreshold" : 2.0},
+    {"label": "events", "url": "http://localhost:4000/events/", "referenceUrl": "https://codurance.com/events/", "delay": 300, "misMatchThreshold" : 6.5, 
+      "hideSelectors" : [".g-bg-black-opacity-0_9", ".g-bg-gray-dark-v1", "#lssc_events"]
+    },
     {"label": "company", "url": "http://localhost:4000/company/", "referenceUrl": "https://codurance.com/company/"},
-    {"label": "careers", "url": "http://localhost:4000/careers/", "referenceUrl": "https://codurance.com/careers/"},
-    {"label": "become_a_craftsperson", "url": "http://localhost:4000/careers/become_a_craftsperson/", "referenceUrl": "https://codurance.com/careers/become_a_craftsperson/"},
-    {"label": "become_an_apprentice", "url": "http://localhost:4000/careers/become_an_apprentice/", "referenceUrl": "https://codurance.com/careers/become_an_apprentice/"},
+    {"label": "careers", "url": "http://localhost:4000/careers/", "referenceUrl": "https://codurance.com/careers/", "misMatchThreshold" : 3.5},
+    {"label": "become_a_craftsperson", "url": "http://localhost:4000/careers/become_a_craftsperson/", "referenceUrl": "https://codurance.com/careers/become_a_craftsperson/", "misMatchThreshold" : 4.0,
+      "viewports": [
+        {
+          "label": "macbook-pro",
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    
+    },
+    {"label": "become_an_apprentice", "url": "http://localhost:4000/careers/become_an_apprentice/", "referenceUrl": "https://codurance.com/careers/become_an_apprentice/", "misMatchThreshold" : 3.5},
     {"label": "privacy", "url": "http://localhost:4000/policies/privacy/", "referenceUrl": "https://codurance.com/policies/privacy/"},
     {"label": "cookie", "url": "http://localhost:4000/policies/cookie/", "referenceUrl": "https://codurance.com/policies/cookie/"}
   
