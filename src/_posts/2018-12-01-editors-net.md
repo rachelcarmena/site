@@ -35,3 +35,9 @@ Elements of the comparison:
 - Refactor
 - Editing
 - On screen information about compiling issues.
+- terminal
+- source control
+- markdown viewers
+- Azure
+- DB tooling
+- Project navigation 
