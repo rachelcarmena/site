@@ -15,6 +15,7 @@ Editor Comparison - Net Edition
 
 Editors:
 - Visual Studio 2017
+- Jetbrains Rider
 - Visual Studio Code
 - Atom
 - Sublime Text
