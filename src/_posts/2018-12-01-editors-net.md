@@ -43,3 +43,4 @@ Elements of the comparison:
 - Project navigation 
 - Debugging
 - Plugin/Add-on ecosystem
+- OS Availability
