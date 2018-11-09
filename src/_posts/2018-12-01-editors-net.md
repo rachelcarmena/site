@@ -41,3 +41,5 @@ Elements of the comparison:
 - Azure
 - DB tooling
 - Project navigation 
+- Debugging
+- Plugin/Add-on ecosystem
